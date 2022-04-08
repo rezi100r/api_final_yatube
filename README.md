@@ -1,5 +1,5 @@
 ### Описание
-Социальная сеть для публикации личных дневников, модуль API
+Модуль API - Социальная сеть для публикации личных дневников. 
 ### Технологии
 Python 3.8
 Django 2.2.19
@@ -27,12 +27,31 @@ python manage.py changepassword admin
 python manage.py runserver
 ```
 ### API Примеры
-Создание токена
-/api/v1/jwt/create/
+Создание токена:
+```
+POST .../api/v1/jwt/create/
+Content-Type: application/json
 {
     "username": "",
     "password": ""
 }
+```
+Просмотр постов:
+```
+GET .../api/v1/posts/
+```
+Просмотр групп:
+```
+GET .../api/v1/groups/
+```
+Просмотр комментариев для поста:
+```
+GET .../api/v1/posts/<post_id>/comments/
+```
+Просмотр подписок:
+```
+GET .../api/v1/follow/
+```
 ### Авторы
 Николай Егорченков
 
